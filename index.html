@@ -1,121 +1,94 @@
-<section data-cmp-name="hero" class="hero autoheight">
-	<div class="container">
-		<div class="row">
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha Giả Lập</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f7f7f7;
+        }
 
-			
+        .captcha-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+            box-sizing: border-box;
+        }
 
+        .captcha-header {
+            font-size: 18px;
+            color: #4a4a4a;
+            margin-bottom: 20px;
+        }
 
-			
-			<div class="col-12 col-lg-7 hero-content">
+        .captcha-box {
+            background-color: #f8f8f8;
+            border: 2px solid #dadce0;
+            border-radius: 5px;
+            padding: 12px;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-				<h1 class="hero-headline">Avast <span class="highlight">Free</span> Antivirus</h1>
-		<div class="hero-text body-1 sticky-waypoint">Chiếm ít dung lượng, bảo vệ trực quan, được hỗ trợ bởi một cộng đồng mạnh mẽ với trên 435 triệu người dùng. Đây là biện pháp an ninh mạng thế hệ mới dành cho tất cả mọi người.</div>		
+        .captcha-box:hover {
+            background-color: #f1f1f1;
+        }
 
-		<div class="hero-buttons">
-																						   
-					
-<a data-platform="pc" href="https://www.avast.com/vi-vn/download-thank-you.php?product=FAV-PPC&amp;locale=vi-vn&amp;direct=1" data-bi-download-name="FAV-PPC" tabindex="0" data-cmp-name="button" data-cms-component="button--full lg blue" data-role="download-link" data-download-name="FAV-PPC" class="btn full size-lg theme-blue btn-icon-left bi-download-link js-pc" js-popup-event="true">
-<div data-cmp-name="icon" role="img" class="icon icon-32 icon-win btn-icon">
-</div><span>Tải xuống miễn phí</span></a>
-					
-<a data-platform="mac" href="https://www.avast.com/vi-vn/download-thank-you.php?product=FAV-PPC-MAC&amp;locale=vi-vn&amp;direct=1" data-bi-download-name="FAV-PPC-MAC" tabindex="0" data-cmp-name="button" data-cms-component="button--full lg blue" data-role="download-link" data-download-name="FAV-PPC-MAC" class="btn full size-lg theme-blue btn-icon-left bi-download-link js-mac" js-popup-event="true">
-<div data-cmp-name="icon" role="img" class="icon icon-32 icon-mac btn-icon">
-</div><span>Tải xuống miễn phí</span></a>
-					
-<a data-platform="android" data-behavior="downloadPage" href="/vi-vn/download-thank-you.php?product=AMS&amp;locale=vi-vn" data-bi-download-name="AMS" tabindex="0" data-cmp-name="button" data-cms-component="button--full lg blue" data-role="download-link" data-download-name="AMS" class="btn full size-lg theme-blue btn-icon-left bi-download-link js-android">
-<div data-cmp-name="icon" role="img" class="icon icon-32 icon-android btn-icon">
-</div><span>Tải xuống miễn phí<br>từ Google Play</span></a>
-					
-<a data-platform="ios" data-behavior="downloadPage" href="/vi-vn/download-thank-you.php?product=IMS&amp;locale=vi-vn" data-bi-download-name="IMS" tabindex="0" data-cmp-name="button" data-cms-component="button--full lg blue" data-role="download-link" data-download-name="IMS" class="btn full size-lg theme-blue btn-icon-left bi-download-link js-ios">
-<div data-cmp-name="icon" role="img" class="icon icon-32 icon-ios btn-icon">
-</div><span>Tải xuống miễn phí<br>từ App Store</span></a>
-		
-				
+        .captcha-box:active {
+            background-color: #e0e0e0;
+        }
 
-<a href="#section-table" tabindex="0" data-cmp-name="button" data-cms-component="button--outline lg blue" data-role="cta-link" class="btn outline size-lg theme-blue"><span>So sánh sản phẩm</span></a>
-		</div>
+        .captcha-icon {
+            font-size: 24px;
+            color: #4d90fe;
+        }
 
-		<div class="hero-note">
-			<div class="js-pc">Cũng hoạt động trên <a href="free-mac-security"><span class="fw-bold">máy Mac</span></a>, thiết bị <a href="free-mobile-security"><span class="fw-bold">Android</span></a> và <a href="free-ios-security"><span class="fw-bold">iOS</span></a></div>
-			<div class="js-mac">Cũng hoạt động trên <a href="free-antivirus-download"><span class="fw-bold">máy tính</span></a>, thiết bị <a href="free-mobile-security"><span class="fw-bold">Android</span></a> và <a href="free-ios-security"><span class="fw-bold">iOS</span></a></div>
-			<div class="js-android">Cũng hoạt động trên <a href="free-antivirus-download"><span class="fw-bold">máy tính</span></a>, <a href="free-mac-security"><span class="fw-bold">máy Mac</span></a> và <a href="free-ios-security"><span class="fw-bold">iOS</span></a></div>
-			<div class="js-ios">Cũng sử dụng được cho <a href="free-antivirus-download"><span class="fw-bold">PC</span></a>, <a href="free-mac-security"><span class="fw-bold">máy Mac</span></a> và <a href="free-mobile-security"><span class="fw-bold">thiết bị Android</span></a></div>
-		</div>
+        .captcha-text {
+            margin-top: 10px;
+            color: #5f6368;
+            font-size: 14px;
+        }
 
-		<div class="hero-awards-wrap">
-			<div data-cmp-name="award-badges" class="award-badges-wrap size-sm short no-text">
-		
+        .captcha-footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #9e9e9e;
+        }
+    </style>
+</head>
+<body>
 
-		
-		
-		
-		<div class="award-badge">
-				<div class="badge-image">
-					<img src="https://static3.avast.com/10004249/web/i/v2/aim/img/awards-certifications/logos/avtest_certified_homeuser_2023-12_tp.png?height=38" width="68" height="38" alt="" loading="lazy" class="ratio-16-9">
-					
-				</div>
-
-				<div class="badge-text">
-					<span class="fw-bold">Sản phẩm hàng đầu</span><br>năm 2024
-
-				</div>
-
-		</div>
-
-		
-		
-
-		
-		
-		
-		<div class="award-badge">
-				<div class="badge-image">
-					<img src="https://static3.avast.com/10004249/web/i/v3/aim/img/_awards/award_43280_2853279_toprated.png?height=38" width="68" height="38" alt="" loading="lazy" class="ratio-16-9">
-					
-				</div>
-
-				<div class="badge-text">
-					<span class="fw-bold">Xếp hạng cao nhất</span><br>năm 2024
-
-				</div>
-
-		</div>
-
-		
-		
-
-		
-		
-		
-		<div class="award-badge">
-				<div class="badge-image">
-					<img src="https://static3.avast.com/10004249/web/i/v3/aim/img/_awards/SELabs-2023.png?height=50" width="50" height="50" alt="" loading="lazy" class="ratio-1-1">
-					
-				</div>
-
-				<div class="badge-text">
-					<span class="fw-bold">Công cụ chống phần mềm độc hại miễn phí tốt nhất</span><br>năm 2023
-
-				</div>
-
-		</div>
-
-		
+<div class="captcha-container">
+    <div class="captcha-header">
+        Để đảm bảo an toàn cho web của chúng tôi, vui lòng xác minh bạn không phải là robot!
+    </div>
+    <div class="captcha-box" onclick="verifyCaptcha()">
+        <div class="captcha-icon">&#10003;</div>
+        <div class="captcha-text">Tôi không phải là robot</div>
+    </div>
+    <div class="captcha-footer">
+        Bằng cách xác nhận, bạn đồng ý với <a href="#">Điều khoản dịch vụ</a> của chúng tôi.
+    </div>
 </div>
-		</div>
-			</div>
 
-			
+<script>
+    function verifyCaptcha() {
+        alert("Xác minh thành công! Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi.");
+    }
+</script>
 
-			
-				<div class="col-12 col-lg-5 hero-content-right">
-						<div class="hero-image-wrapper">
-							<img src="https://static3.avast.com/10004249/web/i/v3/aim/img/lp-ppc-free-av-brand/hero-img.svg?width=664" alt="" height="100%" class="hero-image">
-						</div>
-				</div>
-			
-
-		</div>
-	</div>
-	
-</section>
+</body>
+</html>
