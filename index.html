@@ -1,1 +1,140 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Clone</title>
+    <style>
+        /* Các style cơ bản */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2f3136;
+            color: white;
+        }
+
+        .discord-container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #2f3136;
+            padding-top: 20px;
+        }
+
+        .sidebar .channel {
+            padding: 15px;
+            color: #b9bbbe;
+            cursor: pointer;
+        }
+
+        .sidebar .channel:hover {
+            background-color: #3a3f47;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: #36393f;
+        }
+
+        .chat-window {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: #2f3136;
+        }
+
+        .chat-window .message {
+            background-color: #444b56;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .chat-window .message .user {
+            font-weight: bold;
+        }
+
+        .chat-input {
+            padding: 10px;
+            background-color: #40444b;
+            border: none;
+            color: white;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .chat-input:focus {
+            outline: none;
+        }
+
+        .send-btn {
+            background-color: #5865f2;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .send-btn:hover {
+            background-color: #4e54e0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="discord-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="channel" onclick="loadChannel('General')">General</div>
+            <div class="channel" onclick="loadChannel('Gaming')">Gaming</div>
+            <div class="channel" onclick="loadChannel('Music')">Music</div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="chat-window" id="chat-window">
+                <div class="message">
+                    <span class="user">Bot</span>: Welcome to the chat!
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="message-input" placeholder="Type a message...">
+                <button class="send-btn" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Load a channel's messages
+        function loadChannel(channel) {
+            const chatWindow = document.getElementById('chat-window');
+            chatWindow.innerHTML = `<div class="message"><span class="user">Bot</span>: Welcome to the ${channel} channel!</div>`;
+        }
+
+        // Send a message to the chat
+        function sendMessage() {
+            const input = document.getElementById('message-input');
+            const messageText = input.value.trim();
+            if (messageText !== "") {
+                const chatWindow = document.getElementById('chat-window');
+                const message = document.createElement('div');
+                message.classList.add('message');
+                message.innerHTML = `<span class="user">You</span>: ${messageText}`;
+                chatWindow.appendChild(message);
+                input.value = ''; // Reset input field
+                chatWindow.scrollTop = chatWindow.scrollHeight; // Auto-scroll to the latest message
+            }
+        }
+    </script>
+
+</body>
+</html>
