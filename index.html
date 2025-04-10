@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Discord - Đăng nhập</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://discord.com/assets/847541504914fd33810e70a0ea73177e.ico">
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <div class="left">
+        <h2>Chào mừng trở lại!</h2>
+        <p>Rất vui mừng khi được gặp lại bạn!</p>
+        <form id="loginForm">
+          <label>EMAIL HOẶC SỐ ĐIỆN THOẠI *</label>
+          <input type="text" id="username" required>
+          <label>MẬT KHẨU *</label>
+          <input type="password" id="password" required>
+          <a class="forgot" href="#">Quên mật khẩu?</a>
+          <button type="submit">Đăng nhập</button>
+        </form>
+        <p class="register">Cần một tài khoản? <a href="#">Đăng ký</a></p>
+      </div>
+      <div class="right">
+        <img id="qr" src="" alt="QR Code">
+        <h3>Đăng nhập bằng Mã QR</h3>
+        <p>Quét bằng ứng dụng di động Discord để đăng nhập tức thì.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="loading" class="loading hidden">
+    <div class="spinner"></div>
+    <p>Đang khởi động...</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
